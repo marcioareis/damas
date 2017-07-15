@@ -41,5 +41,5 @@ interface PecaInterface
     /**
      * @return mixed
      */
-    public function movimentar($origem, $destino, $tipo);
+    public function movimentar($origem, $destino);
 }

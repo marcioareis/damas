@@ -54,6 +54,8 @@ abstract class JogoDama implements JogoDamaInterface
             && $this->posicaoVazia($origem, $destino, $array)
             && $this->posicaoValida($origem, $destino)
             && $this->movimentacaoDiagonalFrente($origem, $destino, $array)
+            && $this->validarMovimentoBranca($origem, $destino, $array)
+            || $this->validarMovimentoPreta($origem, $destino, $array)
         ) {
             return true;
         }
@@ -61,6 +63,35 @@ abstract class JogoDama implements JogoDamaInterface
         return false;
     }
 
+    /**
+     * @param $origem
+     * @param $destino
+     *
+     * @return bool
+     */
+    public function validarMovimentoBranca($origem, $destino, $array)
+    {
+        if ($array[$origem[0]][$origem[1]] == "B" && $destino[0][1] > $origem[0][1]){
+            return true;
+        }
+         return false;
+
+    }
+
+    /**
+     * @param $origem
+     * @param $destino
+     *
+     * @return bool
+     */
+    public function validarMovimentoPreta($origem, $destino, $array)
+    {
+        if ($array[$origem[0]][$origem[1]] == "P" && $destino[0][1] < $origem[0][1]){
+            return true;
+        }
+        return false;
+
+    }
     /**
      * @param string $origem
      * @param string $destino

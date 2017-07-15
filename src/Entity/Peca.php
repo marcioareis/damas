@@ -41,14 +41,6 @@ use Webdev\PecaInterface\PecaInterface;
 class Peca extends JogoDama implements PecaInterface
 {
     /**
-     * @var $destino string
-     */
-    protected $destino;
-    /**
-     * @var $origem string
-     */
-    protected $origem;
-    /**
      * @var $tabuleiro Tabuleiro
      */
     protected $tabuleiro;
@@ -56,20 +48,16 @@ class Peca extends JogoDama implements PecaInterface
     /**
      * Peca constructor.
      *
-     * @param string $origem
-     * @param string $destino
      */
-    public function __construct($origem = '', $destino = '')
+    public function __construct()
     {
-        $this->origem = $origem;
-        $this->destino = $destino;
         $this->tabuleiro = new Tabuleiro();
     }
 
     /**
      * @return mixed
      */
-    public function movimentar($origem, $destino, $tipo)
+    public function movimentar($origem, $destino)
     {
         if ($this->tabuleiro->existeTabuleiro()) {
             echo "Erro Arquivo Inexistente";
@@ -77,7 +65,6 @@ class Peca extends JogoDama implements PecaInterface
         }
 
         $tabuleiro = $this->tabuleiro->getTabuleiro();
-        
 
         if ($this->validarMovimentacao($origem, $destino, $tabuleiro)) {
             $tabuleiroOrigem = $tabuleiro[$origem[0]][$origem[1]];
@@ -89,43 +76,7 @@ class Peca extends JogoDama implements PecaInterface
             echo "Erro Movimentacao Incorreta";
             return;
         }
-
         return;
     }
 
-    /**
-     * @return string
-     */
-    public function getDestino()
-    {
-        return $this->destino;
-    }
-
-    /**
-     * @param string $destino
-     *
-     * @return void
-     */
-    public function setDestino($destino)
-    {
-        $this->destino = $destino;
-    }
-
-    /**
-     * @return string
-     */
-    public function getOrigem()
-    {
-        return $this->origem;
-    }
-
-    /**
-     * @param string $origem
-     *
-     * @return void
-     */
-    public function setOrigem($origem)
-    {
-        $this->origem = $origem;
-    }
 }
