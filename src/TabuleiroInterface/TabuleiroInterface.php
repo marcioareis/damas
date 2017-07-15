@@ -12,7 +12,7 @@
  *
  * @category Game
  * @package  Webdev\TabuleiroInterface
- * @author   Márcio Augusto Reis <augustoreis36@gmail.com>
+ * @author   Márcio Augusto dos Reis <augustoreis36@gmail.com>
  * @license  http://www.php.net/license/3_01.txt  PHP License 3.01
  * @link     https://www.unicesumar.edu.br/
  *
@@ -33,7 +33,7 @@ namespace Webdev\TabuleiroInterface;
  *
  * @category Game
  * @package  Webdev\TabuleiroInterface
- * @author   Márcio Augusto Reis <augustoreis36@gmail.com>
+ * @author   Márcio Augusto dos Reis <augustoreis36@gmail.com>
  * @license  http://www.php.net/license/3_01.txt  PHP License 3.01
  * @link     https://www.unicesumar.edu.br/
  *

@@ -12,7 +12,7 @@
  *
  * @category Game
  * @package  Webdev\Entity
- * @author   Márcio Augusto Reis <augustoreis36@gmail.com>
+ * @author   Márcio Augusto dos Reis <augustoreis36@gmail.com>
  * @license  http://www.php.net/license/3_01.txt  PHP License 3.01
  * @link     https://www.unicesumar.edu.br/
  */
@@ -34,7 +34,7 @@ use Webdev\PecaInterface\PecaInterface;
  *
  * @category Game
  * @package  Webdev\Entity
- * @author   Márcio Augusto Reis <augustoreis36@gmail.com>
+ * @author   Márcio Augusto dos Reis <augustoreis36@gmail.com>
  * @license  http://www.php.net/license/3_01.txt  PHP License 3.01
  * @link     https://www.unicesumar.edu.br/
  */
